@@ -1,0 +1,21 @@
+[package]
+name = "yalp"
+version = "0.1.0"
+authors = ["Alex <alex@42layers.io>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hyper = "0.13"
+tokio = { features = ["rt-threaded", "macros"], version = "0.2" }
+sqlx = { version = "0.3.0-beta.1", default-features = false, features = [ "runtime-tokio", "macros", "postgres", "uuid" ] }
+bytes = "0.5"
+futures-util = "0.3"
+serde_json = "1.0"
+pretty_env_logger = "0.4"
+serde = { features = ["derive"],  version = "1.0" }
+include_dir = "0.6"
+sqlx-pg-migrate = "1.0"
+reqwest = "0.10"
+dotenv = "0.15"
